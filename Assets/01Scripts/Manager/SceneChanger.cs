@@ -9,11 +9,6 @@ public class SceneChanger : MonoBehaviour
    [SerializeField] private int Stagenumber=-1; // 移動先のステージナンバー
    public void ChangeScene()
    {
-
-       if(Stagenumber!=-1)
-       {
-            GameStatusManager.Instance.runtimeStatus.currentStageIndex=Stagenumber;
-       }
        SceneManager.LoadScene(sceneName);
    }
 }
