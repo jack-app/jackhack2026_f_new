@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class GoalPost : MonoBehaviour
 {
     [SerializeField] private SceneChanger sceneChanger;
+     [Header("現在のステージ")]
+      [Tooltip("ゴールフラグを付けるよう")]
+    [SerializeField] private int stage=0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -15,6 +18,10 @@ public class GoalPost : MonoBehaviour
 
     void ClearLevel()
     {
+        if(GameStatusManager.Instance.runtimeStatus.maxReachedStage>stage)
+        {
+            GameStatusManager.Instance.runtimeStatus.maxReachedStage=stage;
+        }
         sceneChanger.ChangeScene();
     }
 }

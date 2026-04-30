@@ -773,7 +773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
   sceneName: 02StageSelect
-  Stagenumber: -1
 --- !u!114 &1031525805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,10 +999,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Blue Bird That Travels Through Time
+  m_text: "\u6642\u3092\u99C6\u3051\u308B\u9752\u3044\u9CE5"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4580af3d077752d47b09bee2c443139a, type: 2}
-  m_sharedMaterial: {fileID: 3821408898254988138, guid: 4580af3d077752d47b09bee2c443139a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eec8de604d7dd24b902323a89ae9d54, type: 2}
+  m_sharedMaterial: {fileID: 8269451452544024015, guid: 9eec8de604d7dd24b902323a89ae9d54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1133,7 +1132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
   sceneName: 00HomeScene
-  Stagenumber: -1
 --- !u!114 &2018916909
 MonoBehaviour:
   m_ObjectHideFlags: 0
