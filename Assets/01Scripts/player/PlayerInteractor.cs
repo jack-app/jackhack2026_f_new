@@ -13,7 +13,7 @@ public class PlayerInteractor : MonoBehaviour
             currentInteractable = null;
         }
 
-        // もし記憶しているオブジェクトがあり、かつ Eキー(またはボタン) が押されたら
+        // もし記憶しているオブジェクトがある
         if (currentInteractable != null )
         {
             // アイテム側の処理を実行する！
