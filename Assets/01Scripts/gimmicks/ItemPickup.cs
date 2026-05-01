@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour, IInteractable
 {
-    public string itemName = "ポーション";
+    [SerializeField]private string itemName = "ポーション";
 
     // インターフェースのルールに従ってInteractの中身を書く
     public void Interact()

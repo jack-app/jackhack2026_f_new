@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00Scene/04Result.unity
     guid: 45b23a7a627fef5459ba967146349510
+  - enabled: 1
+    path: Assets/00Scene/WorkSpace/mijyumaru.unity
+    guid: 0b1d2c5fef59ad34bb892a7497ad53b0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

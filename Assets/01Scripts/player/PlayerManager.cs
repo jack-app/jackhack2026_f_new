@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,7 +27,10 @@ public class PlayerManager : MonoBehaviour
         moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
         jumpForce=GameStatusManager.Instance.runtimeStatus.jumpForce;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        RespownPoint=StartObject.transform.position;
+        if(StartObject!=null)
+        {
+            RespownPoint=StartObject.transform.position;
+        }
     }
 
     
@@ -46,10 +50,22 @@ public class PlayerManager : MonoBehaviour
         }
         
     }
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.started) 
+    {
+        return; 
+    }
+        //デバック用
+            GameStatusManager.Instance.runtimeStatus.SetPause();
+            Debug.Log("Pressed E");
+
+    }
 
     void Update()
     {
          isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
+
          
     }
 

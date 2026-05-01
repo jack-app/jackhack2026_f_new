@@ -100,17 +100,22 @@ public class GameStatus : ScriptableObject
     }
 
     //時間停止用
-    public void SetPause(bool isPaused)
+    public void SetPause()
     {
+       
         if (!isPaused)
         {
             Time.timeScale = 0f;
+            isPaused=true;
             AudioListener.pause = true; // または MixerでBGMを下げる
+             Debug.Log("時間停止");
         }
         else
         {
             Time.timeScale = 1f;
+            isPaused=false;
             AudioListener.pause = false;
+            Debug.Log("時間うごきだし");
         }
     }
 }
