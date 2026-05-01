@@ -6,9 +6,19 @@ public class Pitfall : MonoBehaviour
     [Header("落下ダメージ量")]
     public int fallDamage = 1;
 
-    [Header("プレイヤーのスタート地点のオブジェクトを取り付ける")]
-    [Tooltip("リスポーン地点になる")]
-    [SerializeField] private Transform respawnPoint; 
+    [Header("プレイヤーのスタート地点のオブジェクトを取り付けてください")]
+    [Tooltip("リスポーン地点となります")]
+    [SerializeField] private GameObject StartObject;
+
+    private Vector3 RespownPoint;
+
+    void Start()
+    {
+        if(StartObject!=null)
+        {
+            RespownPoint=StartObject.transform.position;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +31,8 @@ public class Pitfall : MonoBehaviour
             }
 
             // ワープ
-            collision.transform.position = respawnPoint.position;
+                collision.transform.position = RespownPoint;
+            
 
             //速度0に
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
