@@ -43,6 +43,9 @@ public class GameStatus : ScriptableObject
     public int coins = 0;
     [Tooltip("トータルコイン")]
     public int totalcoins = 0;
+    [Header("時間")]
+    [Tooltip("現在:True , 過去:False")]
+    public bool isCurrent = true;
 
     /// <summary>
     /// ゲーム開始時やタイトルから始めた時に、今回のプレイデータをリセットする
@@ -62,6 +65,7 @@ public class GameStatus : ScriptableObject
         totalcoins=0;
         health = 3;
         isPaused =false;
+        isCurrent = true;
     }
 
     //簡易リセット用（ステージ入るときとかに利用推奨）
@@ -71,6 +75,7 @@ public class GameStatus : ScriptableObject
         speed = 5f;
         jumpForce = 5f;
         isPaused =false;
+        isCurrent = true;
     }
 
     /// <summary>
