@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    private int currentHP=1;
+    public int currentHP=1;
     private PlayerManager playerManager;
     void Start()
     {
