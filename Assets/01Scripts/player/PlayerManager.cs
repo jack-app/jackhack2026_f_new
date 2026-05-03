@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Unity.Mathematics;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -18,9 +19,12 @@ public class PlayerManager : MonoBehaviour
     private Vector2 moveInput;
     private bool jumppressed=false;
     private bool isGrounded;
+    public bool isWalking=false;
     private float jumpForce;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     private Vector3 RespownPoint;
+    [SerializeField] PlayerAnimation playerAnimation;
 
     void Start()
     {
@@ -31,6 +35,14 @@ public class PlayerManager : MonoBehaviour
         if(StartObject!=null)
         {
             RespownPoint=StartObject.transform.position;
+        }
+        if(playerAnimation==null)
+        {
+            playerAnimation=GetComponentInChildren<PlayerAnimation>();
+        }
+        if(spriteRenderer==null)
+        {
+            spriteRenderer=GetComponentInChildren<SpriteRenderer>();
         }
     }
 
@@ -48,6 +60,7 @@ public class PlayerManager : MonoBehaviour
         if (context.started)
         {
             jumppressed =true;
+            playerAnimation.JumpAnim();
         }
         
     }
@@ -80,6 +93,23 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         jumppressed = false; // 入力をリセット
+        if(math.abs(moveInput.x) > 0.1)
+        {
+            isWalking=true;
+        }
+        else
+        {
+            isWalking=false;
+        }
+
+        if (moveInput.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (moveInput.x < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
      private void OnDrawGizmosSelected()
