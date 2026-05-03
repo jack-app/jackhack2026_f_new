@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba93069cc93a5164fbf8bc6572b9f641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchTimeChanger
-  timeChanger: {fileID: 0}
+  timeChanger: {fileID: 9164126432508069745, guid: c6ec571760b0ea64ebec02bbc21f99a9, type: 3}
 --- !u!114 &7151540787297256541
 MonoBehaviour:
   m_ObjectHideFlags: 0
