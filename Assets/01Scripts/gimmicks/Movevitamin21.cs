@@ -21,7 +21,7 @@ public class Movevitamin21 : MonoBehaviour
     {
         Vector3 target = isMoving ? targetPos : originalPos;
 
-        transform.localPosition = Vector3.Lerp(
+        transform.localPosition = Vector3.MoveTowards(
             transform.localPosition,
             target,
             Time.deltaTime * moveSpeed
