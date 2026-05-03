@@ -7,10 +7,11 @@ public class SpireDropper : MonoBehaviour
     DropperSwitch drSwitch;
     bool shooting;
     GameObject createSpirePrefab;
+    public GameObject switchObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       drSwitch = GameObject.Find("DropperSwitch").GetComponent<DropperSwitch>(); 
+       drSwitch = switchObject.GetComponent<DropperSwitch>(); 
     }
 
     // Update is called once per frame
