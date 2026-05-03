@@ -953,6 +953,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
+      value: b58a8ffd-b771-49c6-9d11-ef2a54eed182
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
+      value: 'Player/Climb[/Keyboard/c]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClimb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ivybehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815412103198169432, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8940693593654339071, guid: 0a8baa5f56e1a4d49a923613a960460e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.97131115
