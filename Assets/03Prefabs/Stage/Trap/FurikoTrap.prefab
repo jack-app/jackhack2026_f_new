@@ -265,4 +265,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9be1572eda1814e8b03ed421b6cfed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FurikoMovement
-  rotatespeed: 0.3
+  rotatespeed: 0.5
