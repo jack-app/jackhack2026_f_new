@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     [Header("プレイヤーのスタート地点のオブジェクトを取り付けてください")]
     [Tooltip("リスポーン地点となります")]
     [SerializeField] private GameObject StartObject;
-    private float moveSpeed = 5f;
+    public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool jumppressed=false;
@@ -92,6 +93,22 @@ public class PlayerManager : MonoBehaviour
     public void Respown()
     {
         transform.position=RespownPoint;
+         moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
         
+    }
+
+    public void resetSpeed()
+    {
+        StartCoroutine(DelayCoroutine());
+    }
+
+
+     private IEnumerator DelayCoroutine()
+    {
+        // 3秒間待つ
+        yield return new WaitForSeconds(3);
+        Debug.Log("3秒後の処理");
+        moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
+
     }
 }
