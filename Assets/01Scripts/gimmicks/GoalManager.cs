@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoalPost : MonoBehaviour
+public class GoalManager : MonoBehaviour
 {
     [SerializeField] private SceneChanger sceneChanger;
      [Header("現在のステージ")]
