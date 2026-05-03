@@ -205,10 +205,10 @@ TextureImporter:
       name: bluebird2_2
       rect:
         serializedVersion: 2
-        x: 548
-        y: 825
-        width: 274
-        height: 274
+        x: 581
+        y: 851
+        width: 229
+        height: 206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +338,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 277
+        y: 279
         width: 274
         height: 274
       alignment: 0
@@ -359,7 +359,7 @@ TextureImporter:
       name: bluebird2_9
       rect:
         serializedVersion: 2
-        x: 274
+        x: 276
         y: 277
         width: 274
         height: 274
@@ -381,7 +381,7 @@ TextureImporter:
       name: bluebird2_10
       rect:
         serializedVersion: 2
-        x: 548
+        x: 545
         y: 277
         width: 274
         height: 274
@@ -403,7 +403,7 @@ TextureImporter:
       name: bluebird2_11
       rect:
         serializedVersion: 2
-        x: 822
+        x: 824
         y: 277
         width: 274
         height: 274
@@ -491,8 +491,8 @@ TextureImporter:
       name: bluebird2_15
       rect:
         serializedVersion: 2
-        x: 822
-        y: 3
+        x: 825
+        y: 547
         width: 274
         height: 274
       alignment: 0
@@ -525,6 +525,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":274.0,"y":274.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      bluebird2_: 1483758674555669009
       bluebird2_0: 1483758674555669009
       bluebird2_1: 4781645041196344367
       bluebird2_10: 5825724478480392587
