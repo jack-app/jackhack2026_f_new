@@ -7,11 +7,14 @@ public class StageClearUI : MonoBehaviour
     [SerializeField] private string NextStage;
     public void GoToSelect()
     {
-        SceneManager.LoadScene("Select");
+        GameStatusManager.Instance.runtimeStatus.ReNew();
+        //ステージセレクトへ
+        SceneManager.LoadScene("02StageSelect");
     }
 
     public void GoToNextStage()
     {
+        GameStatusManager.Instance.runtimeStatus.ReNew();
         SceneManager.LoadScene(NextStage);
     }
 }

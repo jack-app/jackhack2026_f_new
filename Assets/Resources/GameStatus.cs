@@ -12,6 +12,13 @@ public class GameStatus : ScriptableObject
     [Tooltip("これまでにクリア・到達した最大ステージ番号（アンロック判定などに使用）")]
     public int maxReachedStage = 1;
 
+    [Tooltip("ステージクリアフラグ")]
+    public bool stage1 = false;
+    public bool stage2 = false;
+    public bool stage3 = false;
+    public bool stage4 = false;
+    public bool stage5 = false;
+
     [Header("スコア情報")]
     [Tooltip("今回のプレイでの現在のスコア")]
     public int currentScore = 0;
@@ -66,6 +73,11 @@ public class GameStatus : ScriptableObject
         health = 3;
         isPaused =false;
         isCurrent = true;
+        stage1 = false;
+        stage2 = false;
+        stage3 = false;
+        stage4 = false;
+        stage5 = false;
     }
 
     //簡易リセット用（ステージ入るときとかに利用推奨）
