@@ -4,10 +4,15 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 {
     public int currentHP=1;
     private PlayerManager playerManager;
+    [SerializeField] PlayerAnimation playerAnimation;
     void Start()
     {
          currentHP = GameStatusManager.Instance.runtimeStatus.health;
          playerManager=GetComponent<PlayerManager>();
+         if(playerAnimation==null)
+        {
+            playerAnimation=GetComponentInChildren<PlayerAnimation>();
+        }
     }
     
     // インターフェースのメソッドを実装
@@ -15,6 +20,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         currentHP -= damageAmount;
         Debug.Log($"プレイヤーは {damageAmount} のダメージを受けた！ 残りHP: {currentHP}");
+        playerAnimation.DamageAnim();
 
         if (currentHP <= 0)
         {
