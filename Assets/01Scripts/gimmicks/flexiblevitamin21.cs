@@ -19,7 +19,7 @@ public class flexiblevitamin21 : MonoBehaviour
     {
        float targetX = isExpanding ? targetWidth : originalScale.x;
 
-       float newX = Mathf.Lerp(transform.localScale.x, targetX, Time.deltaTime * expandSpeed);
+       float newX = Mathf.MoveTowards(transform.localScale.x, targetX, Time.deltaTime * expandSpeed);
 
        transform.localScale = new Vector3(newX, originalScale.y, originalScale.z);
     }
