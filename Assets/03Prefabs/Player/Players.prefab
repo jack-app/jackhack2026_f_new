@@ -241,6 +241,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   StartObject: {fileID: 0}
+  moveSpeed: 5
+  isWalking: 0
+  spriteRenderer: {fileID: 959065796728340291}
+  playerAnimation: {fileID: 8545707914423521437}
 --- !u!70 &958180048541958085
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -275,8 +279,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.0067892075}
-  m_Size: {x: 0.9752507, y: 1.9505014}
+  m_Offset: {x: 0.021165133, y: -0.159006}
+  m_Size: {x: 1.2151256, y: 1.618911}
   m_Direction: 0
 --- !u!114 &6552853566101592121
 MonoBehaviour:
@@ -303,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   currentHP: 1
+  playerAnimation: {fileID: 8545707914423521437}
 --- !u!1 &2522550605912010923
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,8 +375,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.0061033964, y: -0.06408918}
+  m_Radius: 0.30162942
 --- !u!114 &7133126173171624855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +400,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8940693593654339071}
   - component: {fileID: 959065796728340291}
+  - component: {fileID: 7543102493168120409}
+  - component: {fileID: 8545707914423521437}
   m_Layer: 7
   m_Name: chara
   m_TagString: Player
@@ -412,7 +419,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5216720571712246161}
@@ -466,7 +473,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 1483758674555669009, guid: faafd1e101277cd44bc5b0e976ffd286, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -476,3 +483,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &7543102493168120409
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713702232656701431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 532ce701c38ed0d4cb0e87097ccc7677, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8545707914423521437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713702232656701431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da465cc3c805bb8449e37234490d9f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playeranimation
+  playerManager: {fileID: 0}
