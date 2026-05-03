@@ -11,7 +11,7 @@ public class WaterFlow : MonoBehaviour
         if (playerInWater && playerRb != null)
         {
             // プレイヤーを右方向に押し流す
-            playerRb.linearVelocity = new Vector2(flowSpeed, playerRb.linearVelocity.y);
+            playerRb.AddForce(new Vector2(flowSpeed, 0), ForceMode2D.Force);
         }
     }
 
