@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pitfall
   fallDamage: 1
   StartObject: {fileID: 0}
+  SE1: {fileID: 8300000, guid: 08a40b81c63c26345a242499f4417f43, type: 3}
 --- !u!61 &7619480156179759729
 BoxCollider2D:
   m_ObjectHideFlags: 0
