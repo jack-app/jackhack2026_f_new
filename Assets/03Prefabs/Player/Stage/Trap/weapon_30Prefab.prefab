@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7355275800699517453}
   - component: {fileID: 2353766138968497046}
   - component: {fileID: 6548531524975832890}
+  - component: {fileID: 749490196105019297}
   m_Layer: 11
   m_Name: weapon_30Prefab
   m_TagString: Spire
@@ -179,3 +180,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &749490196105019297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444038694216086222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c117a626e45cbc4e9e136607a42fb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamageBox
+  touchDamage: 1
