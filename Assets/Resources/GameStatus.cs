@@ -86,6 +86,8 @@ public class GameStatus : ScriptableObject
         health = 3;
         speed = 5f;
         jumpForce = 5f;
+        isPaused =true;
+        SetPause();
         isPaused =false;
         isCurrent = true;
     }
