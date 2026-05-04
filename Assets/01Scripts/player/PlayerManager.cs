@@ -78,7 +78,7 @@ public class PlayerManager : MonoBehaviour
         return; 
     }
         //デバック用
-            GameStatusManager.Instance.runtimeStatus.SetPause();
+            //GameStatusManager.Instance.runtimeStatus.SetPause();
             Debug.Log("Pressed E");
 
     }
