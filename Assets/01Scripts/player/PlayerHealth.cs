@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public int currentHP=1;
     private PlayerManager playerManager;
     [SerializeField] PlayerAnimation playerAnimation;
+    [SerializeField]private AudioClip SE1; 
     void Start()
     {
          currentHP = GameStatusManager.Instance.runtimeStatus.health;
@@ -44,5 +45,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         currentHP = GameStatusManager.Instance.runtimeStatus.health;
         playerManager.Respown();
         
+    }
+    public void PlaySE1()
+    {
+        AudioManager.Instance.PlaySE(SE1, 0.5f);
     }
 }

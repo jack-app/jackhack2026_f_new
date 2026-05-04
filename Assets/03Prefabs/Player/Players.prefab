@@ -245,6 +245,7 @@ MonoBehaviour:
   isWalking: 0
   spriteRenderer: {fileID: 959065796728340291}
   playerAnimation: {fileID: 8545707914423521437}
+  SE1: {fileID: 8300000, guid: 8f20f19ed30c5c54ba6cdf20c7670fdd, type: 3}
 --- !u!70 &958180048541958085
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -308,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   currentHP: 1
   playerAnimation: {fileID: 8545707914423521437}
+  SE1: {fileID: 8300000, guid: a45c6b9a21a763c448ae33ce1793968e, type: 3}
 --- !u!1 &2522550605912010923
 GameObject:
   m_ObjectHideFlags: 0

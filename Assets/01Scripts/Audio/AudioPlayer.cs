@@ -24,15 +24,15 @@ public class AudioPlayer : MonoBehaviour
     }
     public void PlaySE1()
     {
-        AudioManager.Instance.PlayBGM(SE1, 0.5f);
+        AudioManager.Instance.PlaySE(SE1, 0.5f);
     }
     public void PlaySE2()
     {
-        AudioManager.Instance.PlayBGM(SE2, 0.5f);
+        AudioManager.Instance.PlaySE(SE2, 0.5f);
     }
     public void PlaySE3()
     {
-        AudioManager.Instance.PlayBGM(SE3, 0.5f);
+        AudioManager.Instance.PlaySE(SE3, 0.5f);
     }
     public void StopMusic()
     {
