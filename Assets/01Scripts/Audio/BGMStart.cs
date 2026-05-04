@@ -6,6 +6,7 @@ public class BGMStart : MonoBehaviour
      [SerializeField]private AudioClip BGM1;
     void Start()
     {
+        StopMusic();
         AudioManager.Instance.PlayBGM(BGM1, 0.5f);
     }
 

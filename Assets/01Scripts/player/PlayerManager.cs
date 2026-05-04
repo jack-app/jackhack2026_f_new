@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     private bool jumppressed=false;
     private bool isGrounded;
     public bool isWalking=false;
-    private float jumpForce;
+    [SerializeField]private float jumpForce;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     private Vector3 RespownPoint;
@@ -29,9 +29,13 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        GameStatusManager.Instance.runtimeStatus.ReNew();
         rb = GetComponent<Rigidbody2D>();
         moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
-        jumpForce=GameStatusManager.Instance.runtimeStatus.jumpForce;
+        if(jumpForce==0)
+        {
+            jumpForce=GameStatusManager.Instance.runtimeStatus.jumpForce;
+        }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if(StartObject!=null)
         {

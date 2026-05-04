@@ -7,6 +7,7 @@ public class SceneChanger : MonoBehaviour
    [SerializeField] private string sceneName; // 移動先のシーン名
    public void ChangeScene()
    {
+        GameStatusManager.Instance.runtimeStatus.ReNew();
        SceneManager.LoadScene(sceneName);
    }
 }
