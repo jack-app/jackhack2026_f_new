@@ -5,8 +5,10 @@ public class StageSelectUIController : MonoBehaviour
     [Header("クリア状況に応じて表示したいUI")]
     [SerializeField] private GameObject stage1ClearBadge; // 「Clear!」などの画像
     [SerializeField] private GameObject stage2Button;     // ステージ2へのボタン
+    [SerializeField] private GameObject warp2;     // ステージ2へのワープ
     [SerializeField] private GameObject stage2ClearBadge; // 「Clear!」などの画像
     [SerializeField] private GameObject stage3Button;     // ステージ2へのボタン
+    [SerializeField] private GameObject warp3;     // ステージ3へのワープ
     [SerializeField] private GameObject stage3ClearBadge; // 「Clear!」などの画像
 
     void Start()
@@ -19,22 +21,26 @@ public class StageSelectUIController : MonoBehaviour
         {
             if (stage1ClearBadge != null) stage1ClearBadge.SetActive(true);
             if (stage2Button != null) stage2Button.SetActive(true);
+            if (warp2 != null) warp2.SetActive(true);
         }
         else
         {
             if (stage1ClearBadge != null) stage1ClearBadge.SetActive(false);
             if (stage2Button != null) stage2Button.SetActive(false);
+             if (warp2 != null) warp2.SetActive(false);
         }
 
         if (status.stage2)
         {
             if (stage2ClearBadge != null) stage2ClearBadge.SetActive(true);
             if (stage3Button != null) stage3Button.SetActive(true);
+            if (warp3 != null) warp3.SetActive(true);
         }
         else
         {
             if (stage2ClearBadge != null) stage2ClearBadge.SetActive(false);
             if (stage3Button != null) stage3Button.SetActive(false);
+            if (warp3 != null) warp3.SetActive(false);
         }
 
         if (status.stage3)
