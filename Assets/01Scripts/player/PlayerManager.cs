@@ -20,17 +20,22 @@ public class PlayerManager : MonoBehaviour
     private bool jumppressed=false;
     private bool isGrounded;
     public bool isWalking=false;
-    private float jumpForce;
+    [SerializeField]private float jumpForce;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     private Vector3 RespownPoint;
     [SerializeField] PlayerAnimation playerAnimation;
+    [SerializeField]private AudioClip SE1; 
 
     void Start()
     {
+        GameStatusManager.Instance.runtimeStatus.ReNew();
         rb = GetComponent<Rigidbody2D>();
         moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
-        jumpForce=GameStatusManager.Instance.runtimeStatus.jumpForce;
+        if(jumpForce==0)
+        {
+            jumpForce=GameStatusManager.Instance.runtimeStatus.jumpForce;
+        }
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if(StartObject!=null)
         {
@@ -61,6 +66,8 @@ public class PlayerManager : MonoBehaviour
         {
             jumppressed =true;
             playerAnimation.JumpAnim();
+            
+
         }
         
     }
@@ -91,6 +98,7 @@ public class PlayerManager : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // 上方向速度を一度リセット
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            PlaySE1();
         }
         jumppressed = false; // 入力をリセット
         if(math.abs(moveInput.x) > 0.1)
@@ -140,5 +148,9 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("3秒後の処理");
         moveSpeed=GameStatusManager.Instance.runtimeStatus.speed;
 
+    }
+    public void PlaySE1()
+    {
+        AudioManager.Instance.PlaySE(SE1, 0.5f);
     }
 }
