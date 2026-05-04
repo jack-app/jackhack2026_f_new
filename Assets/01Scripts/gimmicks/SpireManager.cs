@@ -13,8 +13,12 @@ public class SpireManager : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Player" ||collision.gameObject.tag == "TImeSwitch")
+        {
+            Destroy(this.gameObject);
+        }
+        
     }
 }

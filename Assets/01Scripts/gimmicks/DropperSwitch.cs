@@ -14,9 +14,13 @@ public class DropperSwitch : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
+        if (collider2D.gameObject.tag == "Player")
+        {
         spireDrop = true;
         Debug.Log("touch");
+        }
+        
     }
 }
