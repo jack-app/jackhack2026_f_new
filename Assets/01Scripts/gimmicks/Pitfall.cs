@@ -11,6 +11,7 @@ public class Pitfall : MonoBehaviour
     [SerializeField] private GameObject StartObject;
 
     private Vector3 RespownPoint;
+    [SerializeField]private AudioClip SE1; 
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Pitfall : MonoBehaviour
             {
                 target.TakeDamage(fallDamage);
             }
+            PlaySE1();
 
             // ワープ
                 collision.transform.position = RespownPoint;
@@ -54,5 +56,9 @@ public class Pitfall : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(bounds.center, bounds.size);
         }
+    }
+    public void PlaySE1()
+    {
+        AudioManager.Instance.PlaySE(SE1, 0.5f);
     }
 }
