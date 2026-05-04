@@ -441,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &122438625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -533,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &192426950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1198,8 +1198,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageSelectUIController
   stage1ClearBadge: {fileID: 1615553488}
   stage2Button: {fileID: 433247269}
+  warp2: {fileID: 1802412130}
   stage2ClearBadge: {fileID: 66563439}
   stage3Button: {fileID: 1814880957}
+  warp3: {fileID: 192426949}
   stage3ClearBadge: {fileID: 1876350253}
 --- !u!224 &806274495 stripped
 RectTransform:
@@ -2549,7 +2551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1802412131
 BoxCollider2D:
   m_ObjectHideFlags: 0
